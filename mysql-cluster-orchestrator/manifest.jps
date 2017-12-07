@@ -1,8 +1,8 @@
 {
     "jpsType": "install",
-    "jpsVersion": "1.1",
+    "jpsVersion": "1.2",
     "application": {
-        "name": "Scalable MariaDB Cluster with Load Balancing",
+        "name": "Scalable MariaDB Cluster with Load Balancing ",
         "categories": ["apps/clustered-dbs", "apps/popular", "apps/clusters"],
         "description": {
            "text": "Ready-to-work scalable MariaDB Cluster with master-slave asynchronous replication and ProxySQL load balancer in front of it. Is supplied with embedded Orchestrator GUI for convenient cluster management and provides even load distribution, slaves healthcheck and autodiscovery of newly added DB nodes",

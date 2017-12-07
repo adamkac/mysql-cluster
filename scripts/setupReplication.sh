@@ -50,7 +50,7 @@ then
 fi
 
 if [ ${IS_MASTER} == TRUE ]; then
-	echo "=> Configuring MySQL replicaiton as master ..."
+	echo "=> Configuring MySQL replication as master ..."
 	if [ ! -f /master_repl_set ]; then
     	RAND="$(date +%s | rev | cut -c 1-2)$(echo ${RANDOM})"
 		sed -i "/\[mysqld]/a binlog_format = mixed" ${CONF_FILE}
@@ -63,9 +63,9 @@ if [ ${IS_MASTER} == TRUE ]; then
 		/sbin/service mysql restart 2>&1;
 		sleep 3
 		waiting_MYSQL_service;
-		echo "=> Creating a log user ${REPLICATION_USER}:${REPLICATION_PASS}"
-        	$MYSQL -u${MYSQL_ADMIN_USER} -p${MYSQL_ADMIN_PASSWORD} -e "CREATE USER '${REPLICATION_USER}'@'%' IDENTIFIED BY '${REPLICATION_PASS}'"
-        	$MYSQL -u${MYSQL_ADMIN_USER} -p${MYSQL_ADMIN_PASSWORD} -e "GRANT REPLICATION SLAVE ON *.* TO '${REPLICATION_USER}'@'%'"
+		echo "=> Creating a log user ${DB_REPLICA_USER}:${DB_REPLICA_PASSWORD}"
+        	$MYSQL -u${MYSQL_ADMIN_USER} -p${MYSQL_ADMIN_PASSWORD} -e "CREATE USER '${DB_REPLICA_USER}'@'%' IDENTIFIED BY '${DB_REPLICA_PASSWORD}'"
+        	$MYSQL -u${MYSQL_ADMIN_USER} -p${MYSQL_ADMIN_PASSWORD} -e "GRANT REPLICATION SLAVE ON *.* TO '${DB_REPLICA_USER}'@'%'"
         	echo "=> Done!"
         	touch /master_repl_set
 	else
