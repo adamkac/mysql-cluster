@@ -1,2 +1,3 @@
 [mysqld]
 read_only = 1
+slave-skip-errors = all
