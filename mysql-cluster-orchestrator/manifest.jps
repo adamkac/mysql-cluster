@@ -2,13 +2,13 @@
     "jpsType": "install",
     "jpsVersion": "1.1",
     "application": {
-        "name": "Scalable MySQL Cluster with Load Balancing",
+        "name": "Scalable MariaDB Cluster with Load Balancing",
         "categories": ["apps/clustered-dbs", "apps/popular", "apps/clusters"],
         "description": {
-           "text": "Ready-to-work scalable MySQL Cluster with master-slave asynchronous replication and ProxySQL load balancer in front of it. Is supplied with embedded Orchestrator GUI for convenient cluster management and provides even load distribution, slaves healthcheck and autodiscovery of newly added DB nodes",
-           "short": "Scalable MySQL cluster with ProxySQL for even load distribution"
+           "text": "Ready-to-work scalable MariaDB Cluster with master-slave asynchronous replication and ProxySQL load balancer in front of it. Is supplied with embedded Orchestrator GUI for convenient cluster management and provides even load distribution, slaves healthcheck and autodiscovery of newly added DB nodes",
+           "short": "Scalable MariaDB cluster with ProxySQL for even load distribution"
         },
-        "logo": "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master/images/mysql-logo.png",
+        "logo": "https://raw.githubusercontent.com/adamkac/mysql-cluster/master/images/maria.png",
         "env": {
             "topology": {
                 "nodes": [{
@@ -24,7 +24,7 @@
             }
         },
         "globals": {
-            "path": "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master/mysql-cluster-orchestrator",
+            "path": "https://raw.githubusercontent.com/adamkac/mysql-cluster/master/mysql-cluster-orchestrator",
             "db_user": "jelastic-${fn.random}",
             "db_pass": "${fn.password(20)}"
         },

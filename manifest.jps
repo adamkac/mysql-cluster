@@ -2,10 +2,10 @@
 	"jpsType": "install",
 	"jpsVersion": "0.99",
 	"application": {
-		"name": "MySQL DB Auto Clustering",
+		"name": "MariaDB Auto Clustering",
         	"categories": ["apps/clustered-dbs", "apps/popular", "apps/clusters"],
-		"description": "Pre-configured and ready-to-work MySQL Cluster with master slave asynchronous replication. By default, the cluster consists of one master and one slave container. The number of slaves can be increased stating more containers below.",
-		"logo": "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master/images/mysql-logo.png",
+		"description": "Pre-configured and ready-to-work MariaDB Cluster with master slave asynchronous replication. By default, the cluster consists of one master and one slave container. The number of slaves can be increased stating more containers below.",
+		"logo": "https://raw.githubusercontent.com/adamkac/mysql-cluster/master/images/maria.png",
 		"settings": {
 			"fields": [{
 					"type": "spinner",
@@ -25,7 +25,7 @@
 						"cloudlets": 8,
 						"count": "${settings.count}",
 						"nodeGroup": "sqldb",
-						"image": "jelastic/mysql:5.7.14",
+						"image": "jelastic/mariadb:10-latest",
 						"displayName": "Database"
 					}
 				]
@@ -37,7 +37,7 @@
 			}
 		},
 		"globals": {
-			"path": "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master",
+			"path": "https://raw.githubusercontent.com/adamkac/mysql-cluster/master",
 			"db_user": "jelastic-${fn.random}",
 			"db_pass": "${fn.password(20)}"
 		},

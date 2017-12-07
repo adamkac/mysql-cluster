@@ -5,7 +5,7 @@ The JPS package to deploy a ready-to-go scalable MySQL cluster with asynchronous
 ## Scalable MySQL Cluster Package Specifics
 
 The **Scalable MySQL Cluster with Load Balancing** package can be installed in just one-click to create a Docker-based environment with the following topology specifics:
-- by default, includes 1 ProxySQL load balancer node (based on _jelastic/proxysql_ image) and a pair of MySQL database servers (built over the  _[jelastic/mysql](https://hub.docker.com/r/jelastic/mysql/):5.7-latest_ template) with asynchronous replication between them
+- by default, includes 1 ProxySQL load balancer node (based on _jelastic/proxysql_ image) and a pair of MySQL database servers (built over the  _[jelastic/mysql](https://hub.docker.com/r/jelastic/mariadb/):10-latest_ template) with asynchronous replication between them
 - one MySQL container is assigned a _master_ role, whilst the second one (and all the further manually added nodes) will serve as _slave_
 - each container is assigned the default 8-cloudlet limit (equals to _1 GiB_ of RAM and _3.2 GHz_ of CPU) for [automatic vertical scaling](https://docs.jelastic.com/automatic-vertical-scaling)
 
@@ -24,7 +24,7 @@ Before proceeding to the package installation, consider, that the appropriate Pl
 
 Deployment of the current **Scalable MySQL Cluster** solution represents a completely automated process, allowing to deploy a dedicated database cluster in a matter of minutes. In case you don’t have Jelastic account yet, click the button below and provide the required signup data within the opened page to automatically register at the chosen [Jelastic Public Cloud](https://jelastic.cloud/) and proceed with package installation.
 
-[![Deploy](images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master/mysql-cluster-orchestrator/manifest.jps)
+[![Deploy](images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/adamkac/mysql-cluster/master/mysql-cluster-orchestrator/manifest.jps)
 
 If already registered at Jelastic, just log into your account and [import](https://docs.jelastic.com/environment-import) the _**manifest.jps**_ file from above. Also, you can find this solution in [Jelastic Marketplace](https://docs.jelastic.com/marketplace).
 

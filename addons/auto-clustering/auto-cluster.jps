@@ -1,15 +1,15 @@
 {
     "jpsType": "update",
     "id": "mysql-auto-cluster",
-    "name": "Scalable MySQL Cluster with Load Balancing",
+    "name": "Scalable MariaDB Cluster with Load Balancing",
     "description": {
-        "text": "Ready-to-work scalable MySQL Cluster with master-slave asynchronous replication and ProxySQL load balancer in front of it. Is supplied with embedded Orchestrator GUI for convenient cluster management and provides even load distribution, slaves healthcheck and autodiscovery of newly added DB nodes",
-        "short": "Scalable MySQL cluster with ProxySQL for even load distribution"
+        "text": "Ready-to-work scalable MariaDB Cluster with master-slave asynchronous replication and ProxySQL load balancer in front of it. Is supplied with embedded Orchestrator GUI for convenient cluster management and provides even load distribution, slaves healthcheck and autodiscovery of newly added DB nodes",
+        "short": "Scalable MariaDB cluster with ProxySQL for even load distribution"
     },
-    "baseUrl": "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master/addons/auto-clustering",
-    "logo": "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master/images/mysql-logo.png",
+    "baseUrl": "https://raw.githubusercontent.com/adamkac/mysql-cluster/master/addons/auto-clustering",
+    "logo": "https://raw.githubusercontent.com/adamkac/mysql-cluster/master/images/maria.png",
     "globals": {
-        "path": "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/master/mysql-cluster-orchestrator",
+        "path": "https://raw.githubusercontent.com/adamkac/mysql-cluster/master/mysql-cluster-orchestrator",
         "db_user": "jelastic-${fn.random}",
         "db_pass": "${fn.password(20)}",
         "repl_user": "repl-${fn.random}",
