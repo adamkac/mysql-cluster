@@ -15,7 +15,7 @@
                     "cloudlets": 8,
                     "count": 2,
                     "nodeGroup": "sqldb",
-                    "image": "jelastic/mysql:5.7-latest"
+                    "image": "jelastic/mariadb:10-latest"
                 }, {
                     "cloudlets": 8,
                     "nodeGroup": "proxy",
